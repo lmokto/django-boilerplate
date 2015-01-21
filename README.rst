@@ -1,3 +1,5 @@
+<http://www.snicoper.com>_
+
 Modificar las configuraciones de la base de datos en los archivos de ``src/base/settings/(prod|local|test)``.
 
 En producción, modificar ``src/base/settings/prod.py`` la variable ``ALLOWED_HOSTS``.
@@ -17,7 +19,7 @@ Sincronizar la base de datos y crear un super usuario.
 
 Para test
 
-    .. code-block:: bash
+.. code-block:: bash
 
     cd src
     ./test_manage.py test
