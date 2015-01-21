@@ -1,4 +1,4 @@
-<http://www.snicoper.com>_
+http://www.snicoper.com
 
 Modificar las configuraciones de la base de datos en los archivos de ``src/base/settings/(prod|local|test)``.
 
