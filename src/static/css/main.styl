@@ -1,0 +1,42 @@
+body
+    padding-top 70px
+    padding-bottom 20px
+.alert
+    position relative
+    padding-left 40px
+    border none
+    border-radius 0
+    &.alert-info
+    &.alert-danger
+    &.alert-warning
+    &.alert-success
+        &:before
+            font-weight bold
+            font-size 1.5em
+            position absolute
+            top 12px
+            left 10px
+    &.alert-info
+        &:before
+            font-family: "Glyphicons Halflings";
+            content: "\e086";
+
+    &.alert-danger
+        &:before
+            font-family: "Glyphicons Halflings";
+            content: "\e101";
+    &.alert-warning
+        &:before
+            font-family: "Glyphicons Halflings";
+            content: "\e107";
+    &.alert-success
+        &:before
+            font-family: "Glyphicons Halflings";
+            content: "\e084";
+    // Elimina list-style de los warings del formulario
+    // que los pone en una lista.
+    ul
+        padding 0
+        margin 0
+        li
+            list-style none
