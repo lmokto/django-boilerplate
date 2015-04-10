@@ -1,1 +1,3 @@
 # Archivo requeriments base
+
+django==1.8
