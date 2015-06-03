@@ -5,10 +5,6 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '!n6owtz8crs1)f-o(6^--8oo4t(9tbnzrwlu%#_3m2pv%x2^l1'
-
 # Application definition
 
 THIRD_PARTY_APPS += (
