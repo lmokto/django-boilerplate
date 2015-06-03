@@ -11,7 +11,7 @@ __pycache__/
 logs/
 .idea/
 build/
-src/static/components/*
+src/static/bower_components/*
 
 # Specific files #
 ##################
