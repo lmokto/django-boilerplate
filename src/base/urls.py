@@ -1,9 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
-urlpatterns = patterns(
-    '',
-
+urlpatterns = [
     # /*
     url(
         regex=r'^$',
@@ -18,4 +16,4 @@ urlpatterns = patterns(
     url(
         regex=r'^admin/',
         view=include(admin.site.urls)),
-)
+]
