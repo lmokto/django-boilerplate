@@ -8,7 +8,7 @@ TEMPLATE_DEBUG = True
 # Application definition
 
 THIRD_PARTY_APPS += (
-    # 'debug_toolbar',
+    'debug_toolbar',
 )
 
 LOCAL_APPS += ()
