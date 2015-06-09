@@ -21,7 +21,7 @@ db.sqlite3
 ######################
 .directory
 .DS_Store?
-ehthumbs.db
+thumbs.db
 Icon?
 Thumbs.db
 *~
