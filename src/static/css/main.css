@@ -3,22 +3,29 @@ body {
     padding-top: 70px;
 }
 .to-top {
-    background: url(../img/theme/ui.totop.png) no-repeat left top;
-    border: none;
+    background: rgba(0, 0, 0, .3);
+    border-radius: 30px;
     bottom: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     display: none;
-    height: 51px;
-    overflow: hidden;
+    height: 45px;
     position: fixed;
     right: 10px;
-    width: 51px;
+    width: 45px;
+}
+.to-top:before {
+    color: rgb(68, 110, 155);
+    content: "\e113";
+    font-family: "Glyphicons Halflings";
+    font-size: 20px;
+    left: 13px;
+    position: relative;
+    top: 9px;
 }
 .to-top:hover {
-    background: url(../img/theme/ui.totop.png) no-repeat left -51px;
-    display: block;
-    filter: alpha(opacity=0);
-    float: left;
-    height: 51px;
-    overflow: hidden;
-    width: 51px;
+    background: rgb(68, 110, 155);
+    cursor: pointer;
+}
+.to-top:hover:before {
+    color: rgb(255, 255, 255);
 }
