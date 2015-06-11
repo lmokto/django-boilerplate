@@ -1,24 +1,8 @@
 {
-  "name": "Pantilla Django",
-  "version": "0.0.0",
-  "homepage": "https://github.com/snicoper/dj-estructura",
-  "authors": [
-    "Salvador Nicolas <snicoper@gmail.com>"
-  ],
-  "description": "Plantilla base para proyecto django",
-  "moduleType": [
-    "amd"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "name": "Plantilla Django",
+  "private": true,
   "dependencies": {
-    "bootstrap": "~3.3.4",
-    "jquery": "~2.1.3"
+    "bootstrap": "3.3.4",
+    "jquery": "2.1.4"
   }
 }
