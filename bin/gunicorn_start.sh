@@ -8,8 +8,8 @@ USER=snicoper # the user to run as
 GROUP=snicoper # the group to run as
 ADDRESS=127.0.0.1:8001
 NUM_WORKERS=3 # how many worker processes should Gunicorn spawn
-DJANGO_SETTINGS_MODULE=base.settings.prod # which settings file should Django use
-DJANGO_WSGI_MODULE=base.wsgi # WSGI module name
+DJANGO_SETTINGS_MODULE=config.settings.prod # which settings file should Django use
+DJANGO_WSGI_MODULE=config.wsgi # WSGI module name
 
 echo "Starting $NAME as `whoami`"
 

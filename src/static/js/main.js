@@ -1,5 +1,4 @@
-// Boton scroll hacia arriba pagina
-// http://crunchify.com/how-to-add-smooth-scrolling-back-to-top-button-to-your-wordpress-blog/
+// to-top
 jQuery(document).ready(function() {
     var offset = 220;
     var duration = 500;
