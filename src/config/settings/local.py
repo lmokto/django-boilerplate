@@ -7,6 +7,7 @@ DEBUG = True
 
 THIRD_PARTY_APPS += (
     'debug_toolbar',
+    'django_extensions',
 )
 
 LOCAL_APPS += ()
