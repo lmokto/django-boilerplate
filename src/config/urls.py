@@ -4,10 +4,10 @@ from django.contrib import admin
 
 urlpatterns = [
     # /*
-    url(r'^$', include('apps.home.urls')),
+    url(r'^$', include('apps.home.urls', namespace='home')),
 
     # /home/*
-    url(r'^home/', include('apps.home.urls')),
+    url(r'^home/', include('apps.home.urls', namespace='home')),
 
     # /admin/*
     url(r'^admin/', include(admin.site.urls)),
