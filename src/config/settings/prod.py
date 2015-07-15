@@ -4,9 +4,8 @@ from .base import *
 DEBUG = False
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# http://www.miniwebtool.com/django-secret-key-generator
 
-SECRET_KEY = None
+SECRET_KEY = '{{ secret_key }}'
 
 ALLOWED_HOSTS = ['ip(s) y/o dominio(s), aquí']
 
