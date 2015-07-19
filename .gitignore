@@ -11,7 +11,7 @@ __pycache__/
 logs/
 .idea/
 build/
-bower_components/
+static/lib/
 node_modules/
 
 # Specific files #
