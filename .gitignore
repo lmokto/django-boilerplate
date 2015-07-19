@@ -12,12 +12,14 @@ logs/
 .idea/
 build/
 bower_components/
+node_modules/
 
 # Specific files #
 ##################
 db.sqlite3
 tests.db
 .coverage
+npm-debug.log
 
 # OS generated files #
 ######################
