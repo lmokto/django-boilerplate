@@ -11,7 +11,7 @@ __pycache__/
 logs/
 .idea/
 build/
-static/lib/
+src/static/lib/
 node_modules/
 
 # Specific files #
