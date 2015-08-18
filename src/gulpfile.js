@@ -8,12 +8,11 @@ var gulp = require('gulp'),
 
 // Paths
 var paths = {
-    css_input: ['./static/source/css/_imports_all.styl'],
+    css_input: ['./static/source/css/_imports.styl'],
     css_output: './static/dist/css',
     js_input: ['./static/source/js/*.js'],
     js_output: './static/dist/js'
 };
-
 
 // Stylus y CSS
 gulp.task('stylus', function() {
