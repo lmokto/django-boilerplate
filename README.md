@@ -1,6 +1,6 @@
 http://www.snicoper.com
 
-Pequeña plantilla para proyectos con Django
+Pequeña plantilla para proyectos Django.
 
 Por defecto usa Bootstrap como framework css.
 
@@ -11,6 +11,7 @@ Por defecto usa Bootstrap como framework css.
     cd nombre_proyecto/src/
 
     bower install
+    npm install
 
 ### Migracion y super usuario
 
