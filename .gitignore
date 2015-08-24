@@ -12,6 +12,7 @@ __pycache__/
 .sass-cache
 logs/
 build/
+_build/
 static/libs/
 node_modules/
 bower_components/
