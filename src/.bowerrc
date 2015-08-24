@@ -1,5 +1,3 @@
 {
-    "directory": "./static/libs",
-    "analytics": false,
-    "timeout": 12000
+  "directory": "static/libs"
 }

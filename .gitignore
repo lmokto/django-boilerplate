@@ -8,19 +8,20 @@
 # Directories #
 ###############
 __pycache__/
-logs/
 .idea/
+.sass-cache
+logs/
 build/
-src/static/lib/
+static/libs/
 node_modules/
+bower_components/
 
 # Specific files #
 ##################
-db.sqlite3
-tests.db
 .coverage
+*.db
+db.sqlite3
 npm-debug.log
-.sass-cache
 
 # OS generated files #
 ######################
