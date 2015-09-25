@@ -2,9 +2,11 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from apps.home.views import IndexView
+
 urlpatterns = [
-    # /*
-    url(r'^$', include('apps.home.urls', namespace='home')),
+    # / (Pagina principal del sitio)
+    url(r'^$', IndexView.as_view(), name='index'),
 
     # /home/*
     url(r'^home/', include('apps.home.urls', namespace='home')),

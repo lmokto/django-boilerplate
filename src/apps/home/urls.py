@@ -4,6 +4,10 @@ from . import views
 
 urlpatterns = [
 
-    # /home/ or / # Dependiendo de config.urls.py
-    url(r'^$', views.IndexView.as_view(), name='index'),
+    # /home/
+    url(
+        regex='^$',
+        view=views.IndexView.as_view(),
+        name='index'
+    ),
 ]
