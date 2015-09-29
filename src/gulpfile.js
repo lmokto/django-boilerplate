@@ -19,7 +19,7 @@ gulp.task('scripts', function() {
     return gulp.src(['static/sources/js/**/*.js'])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.jsOutput));
+        .pipe(gulp.dest('static/dist/js/'));
 });
 
 // Watchs
