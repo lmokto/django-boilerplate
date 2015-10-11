@@ -40,4 +40,7 @@ chmod +x "$path/src/prod_manage.py"
 echo "Cambiando permisos de ejecucion a $path/src/test_manage.py"
 chmod +x "$path/src/test_manage.py"
 
+echo "Cambiando permisos de ejecucion a $path/bin/init_npm.sh"
+chmod +x "$path/bin/init_npm.sh"
+
 echo "Terminado el cambio de permisos."

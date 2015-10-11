@@ -8,12 +8,12 @@ Por defecto usa Bootstrap como framework css.
 
     django-admin.py startproject --template=https://github.com/snicoper/dj-estructura/archive/master.zip nombre_proyecto
 
-    cd nombre_proyecto/src/
+    cd nombre_proyecto/
 
-    bower install
-    npm install
+    chmod +x bin/permissions.sh
+    ./bin/init_npm.sh
 
-### Migracion y super usuario
+### Migracion y super usuario (desarrollo)
 
     ./manage.py migrate
     ./manage.py createsuperuser

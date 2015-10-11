@@ -10,4 +10,4 @@ find $path -name "migrations" -exec rm -rf {} \;
 echo 'Eliminados los directorios migrations'
 
 echo 'Usar ./manage makemigrations nombre_app'
-echo 'y ./manage migrate --fake'
+echo 'y ./manage migrate --fake si la base de datos ya estaba creada.'
