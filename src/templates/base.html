@@ -5,18 +5,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Application name {% block title %}{% endblock title %}</title>
-  <link rel="shortcut icon" href="{% static "dist/img/favicon.ico" %}">
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="">
+  <title>Application name {% block title %}{% endblock title %}</title>
+  <link rel="shortcut icon" href="{% static "dist/img/favicon.ico" %}">
   {% block meta_tags %}{% endblock meta_tags %}
   {% if debug %}
-    <link href="{% static "libs/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static 'libs/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
   {% else %}
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   {% endif %}
-  <link href="{% static "dist/css/main.min.css" %}" rel="stylesheet">
+  <link href="{% static 'dist/css/main.min.css' %}" rel="stylesheet">
   {% block stylesheets %}{% endblock stylesheets %}
 </head>
 <body {% block body_class %}{% endblock body_class %}>
@@ -32,14 +32,14 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
+          <li><a href="{% url 'home:index' %}">Home</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <div class="container">
-    {% include "_messages.html" %}
+    {% include '_messages.html' %}
 
     {% block content %}{% endblock content %}
 
@@ -54,14 +54,14 @@
   <div class="to-top"></div>
 
   {% if debug %}
-    <script src="{% static "libs/jquery/dist/jquery.min.js" %}"></script>
-    <script src="{% static "libs/bootstrap/dist/js/bootstrap.min.js" %}"></script>
+    <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
   {% else %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   {% endif %}
   <!-- global js -->
-  <script src="{% static "dist/js/main.min.js" %}"></script>
+  <script src="{% static 'dist/js/main.min.js' %}"></script>
   {% block scripts %}{% endblock scripts %}
 </body>
 </html>
