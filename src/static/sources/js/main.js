@@ -1,5 +1,5 @@
 // to-top
-jQuery(document).ready(function() {
+(function() {
     var offset = 220;
     var duration = 500;
     jQuery(window).scroll(function() {
