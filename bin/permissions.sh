@@ -5,8 +5,11 @@
 # directorios 755.
 # Algunos archivos necesitan permisos de ejecucion.
 
-folders=755
-files=644
+# drwxrwxr-x
+folders=775
+
+# -rw-rw-r--
+files=664
 _script=$(readlink -f $0)
 path=$(dirname $(dirname $_script))
 
