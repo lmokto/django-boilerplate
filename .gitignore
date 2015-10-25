@@ -10,15 +10,15 @@
 
 # Directories #
 ###############
-.idea/
-.sass-cache/
 __pycache__/
 _build/
+.idea/
+.sass-cache/
 bower_components/
 build/
 logs/
 node_modules/
-static/libs/
+src/static/libs/
 
 # Specific files #
 ##################
@@ -32,3 +32,4 @@ static/libs/
 Icon?
 thumbs.db
 Thumbs.db
+
