@@ -1,34 +1,34 @@
 # File types #
 ##############
 *.pyc
+*.swn
 *.swo
 *.swp
-*.swn
+*.db
+*.log
+*.sqlite3
 
 # Directories #
 ###############
-__pycache__/
 .idea/
-.sass-cache
-logs/
-build/
+.sass-cache/
+__pycache__/
 _build/
-static/libs/
-node_modules/
 bower_components/
+build/
+logs/
+node_modules/
+static/libs/
 
 # Specific files #
 ##################
-.coverage
-*.db
-db.sqlite3
-npm-debug.log
+
 
 # OS generated files #
 ######################
+*~
 .directory
 .DS_Store?
-thumbs.db
 Icon?
+thumbs.db
 Thumbs.db
-*~
