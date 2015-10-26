@@ -1,3 +1,5 @@
+#!/bin/bash
+
 _script=$(readlink -f $0)
 path=$(dirname $(dirname $_script))
 path=$path'/src'

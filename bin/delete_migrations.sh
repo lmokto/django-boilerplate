@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # NOTA: Usar ./manage makemigrations nombre_app y
 #   ./manage migrate --fake
 

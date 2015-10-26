@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Descarga paquetes npm y bower, util solo para la inicialización
 # del proyecto.
 #
