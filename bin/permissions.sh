@@ -13,10 +13,11 @@ files=664
 _script=$(readlink -f $0)
 path=$(dirname $(dirname $_script))
 
+# Por defecto excluye directorios libs(bower) y node_modules(node)
 echo "Cambiando permisos de directorios $folders"
-find $path -type d -exec chmod $folders {} \;
+find $path -type d ! -path "libs" ! -path "node_modules" -exec chmod $folders {} \;
 echo "Cambiando permisos de archivos $files"
-find $path -type f -exec chmod $files {} \;
+find $path -type f ! -path "libs" ! -path "node_modules" -exec chmod $files {} \;
 
 ########################
 # Permisos de ejecución.
