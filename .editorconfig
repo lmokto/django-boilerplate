@@ -8,17 +8,16 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 indent_style = space
+indent_size = 2
+
+[*.{py,rst}]
 indent_size = 4
 
-[*.{yml,json,html,scss,css}]
-indent_size = 2
-
-[*.{jshintrc,stylintrc,bowerrc}]
-indent_size = 2
-
 [*.md]
+indent_size = 4
 trim_trailing_whitespace = false
 
 [Makefile]
+indent_size = 4
 indent_style = tab
 
