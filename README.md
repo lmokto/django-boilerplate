@@ -4,7 +4,7 @@ Estructura que utilizo para crear practicas con Django con una base ya echa.
 
 Para cambiar/modificar los paquetes con ``pip`` ver ``./requeriments/*.txt``.
 
-Para cambiar otros paquetes en ``node.js`` o ``bower`` por defecto, ver ``./bin/init_npm.sh``.
+Para cambiar otros paquetes en ``node.js`` o ``bower`` por defecto, ver ``./bin/npm_install.sh``, He creado este script para tener las ultimas versiones a la hora de crear el proyecto.
 
 ### Instalación
 
@@ -20,11 +20,11 @@ A parte dará permisos de ejecución a algunos archivos, a los archivos ``./bin/
     chmod +x bin/permissions.sh
     ./bin/permissions.sh
 
-Instalar los paquetes para ``node`` y ``bower``, editar ``./bin/init_npm.sh``, para cambiar los paquetes.
+Instalar los paquetes para ``node`` y ``bower``, editar ``./bin/npm_install.sh``, para cambiar los paquetes.
 
 Por defecto, instalara para ``node`` ``gulp gulp-concat gulp-uglify gulp-sass`` y ``bower`` ``bootstrap jquery``
 
-    ./bin/init_npm.sh
+    ./bin/npm_install.sh
 
 ### Migracion y super usuario (desarrollo)
 
