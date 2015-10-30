@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 // Sass
 gulp.task('css:sass', function() {
-    return gulp.src(['static/sources/styles/main.scss'])
+    return gulp.src(['static/src/styles/main.scss'])
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(concat('main.min.css'))
         .pipe(gulp.dest('static/dist/css/'));
@@ -16,7 +16,7 @@ gulp.task('css:sass', function() {
 
 // Javascript
 gulp.task('scripts', function() {
-    return gulp.src(['static/sources/js/**/*.js'])
+    return gulp.src(['static/src/js/**/*.js'])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('static/dist/js/'));
@@ -24,8 +24,8 @@ gulp.task('scripts', function() {
 
 // Watchs
 gulp.task('watch', function() {
-    gulp.watch('./static/sources/styles/**/*.*', ['css:sass']);
-    gulp.watch('static/sources/js/**/*.js', ['scripts']);
+    gulp.watch('static/src/styles/**/*.*', ['css:sass']);
+    gulp.watch('static/src/js/**/*.js', ['scripts']);
 });
 
 // Default
