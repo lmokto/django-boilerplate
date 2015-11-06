@@ -25,7 +25,7 @@ gulp.task('scripts:js', function() {
     .pipe(gulp.dest('static/dist/js/'));
 });
 
-// Watchs
+// Watches
 gulp.task('watch', function() {
   gulp.watch('static/src/styles/**/*.*', ['css:sass']);
   gulp.watch('static/src/js/**/*.js', ['scripts:js']);

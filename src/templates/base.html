@@ -8,18 +8,13 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="">
-  <title>Application name {% block title %}{% endblock title %}</title>
   <link rel="shortcut icon" href="{% static "dist/img/favicon.ico" %}">
-  {% block meta_tags %}{% endblock meta_tags %}
-  {% if debug %}
-    <link href="{% static 'libs/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
-  {% else %}
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  {% endif %}
+  <title>Application name {% block title %}{% endblock title %}</title>
+  <link href="{% static 'libs/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'dist/css/main.min.css' %}" rel="stylesheet">
   {% block stylesheets %}{% endblock stylesheets %}
 </head>
-<body {% block body_class %}{% endblock body_class %}>
+<body>
 
   {% include '_navbar.html' %}
 
@@ -29,23 +24,13 @@
     {% block content %}{% endblock content %}
 
     <hr>
-    {% block footer %}
-      <footer id="footer" class="clearfix">
-        &copy; Footer de la pagina
-      </footer>
-    {% endblock footer %}
-  </div>
+    {% block footer %}{% endblock footer %}
+  </div><!-- end .container -->
 
   <div class="to-top"></div>
 
-  {% if debug %}
-    <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
-    <script src="{% static 'libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-  {% else %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  {% endif %}
-  <!-- global js -->
+  <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
+  <script src="{% static 'libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
   <script src="{% static 'dist/js/main.min.js' %}"></script>
   {% block scripts %}{% endblock scripts %}
 </body>
