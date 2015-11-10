@@ -11,6 +11,6 @@ path=$path'/src'
 
 cd $path
 
-npm install --save-dev gulp gulp-concat gulp-uglifyjs gulp-sass gulp-sourcemaps
+npm install --save-dev gulp gulp-concat gulp-uglify gulp-sass gulp-sourcemaps
 bower install --save bootstrap jquery
 
