@@ -12,7 +12,7 @@ urlpatterns = [
     ##################################################
 
     # /home/*
-    url(r'^home/', include('apps.home.urls', namespace='home')),
+    url(r'^home/', include('apps.home.urls')),
 
     # /admin/*
     url(r'^admin/', include(admin.site.urls)),
