@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Variables para compartir con los scripts.
+
+this_script=$(readlink -f $0)
+PROJECT_ROOT=$(dirname $(dirname $this_script))
+SRC_ROOT="$PROJECT_ROOT/src"
+BIN_ROOT="$PROJECT_ROOT/bin"

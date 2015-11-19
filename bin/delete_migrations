@@ -1,13 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # NOTA: Usar ./manage makemigrations nombre_app y
 #   ./manage migrate --fake
 
-_script=$(readlink -f $0)
-path=$(dirname $(dirname $_script))
-path=$path'/src'
+source variables
 
-find $path -name "migrations" -exec rm -rf {} \;
+find $SRC_ROOT -name "migrations" -exec rm -rf {} \;
 
 echo 'Eliminados los directorios migrations'
 

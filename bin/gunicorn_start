@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 NAME="snicoper.com" # Name of the application
 DJANGODIR=/home/snicoper/www/snicoper.com/src/ # Django project directory
