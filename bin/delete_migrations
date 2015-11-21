@@ -3,7 +3,8 @@
 # NOTA: Usar ./manage makemigrations nombre_app y
 #   ./manage migrate --fake
 
-source variables
+PROJECT_ROOT=$(dirname $(dirname $(readlink -f $0)))
+SRC_ROOT="$PROJECT_ROOT/src"
 
 find $SRC_ROOT -name "migrations" -exec rm -rf {} \;
 

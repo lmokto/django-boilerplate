@@ -5,10 +5,10 @@
 #
 # Se ha de tener instalado global gulp y bower.
 
-source variables
+PROJECT_ROOT=$(dirname $(dirname $(readlink -f $0)))
+SRC_ROOT="$PROJECT_ROOT/src"
 
 cd $SRC_ROOT
 
 npm install --save-dev gulp gulp-concat gulp-uglify gulp-sass gulp-sourcemaps gulp-shell
 bower install --save bootstrap jquery
-
