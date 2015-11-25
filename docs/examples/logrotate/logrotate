@@ -1,5 +1,3 @@
-# /etc/logrotate.d/gunicorn
-
 /var/log/gunicorn/*log {
     create 0644 snicoper snicoper
     daily
