@@ -2,3 +2,6 @@
 
 ## includes the base.txt requirements file
 -r base.txt
+
+selenium==2.48.0
+coverage==4.0.3
