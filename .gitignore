@@ -19,10 +19,11 @@ build/
 logs/
 node_modules/
 src/static/libs/
+htmlcov
 
 # Specific files #
 ##################
-
+.coverage
 
 # OS generated files #
 ######################
