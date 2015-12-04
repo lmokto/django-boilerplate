@@ -11,14 +11,14 @@ Crear un entorno virtual en Python con ``pip`` y crear el proyecto.
     django-admin.py startproject --template=https://github.com/snicoper/dj-estructura/archive/master.zip nombre_proyecto
     cd nombre_proyecto/
 
-Dar permisos a los archivos, esto nos pondrá las carpeta con permisos ``775 drwxrwxr-x.`` y los archivos ``664 -rw-rw-r--.``, si se quiere cambiar, editar el archivo ``./bin/permissions.sh``.
+Dar permisos a los archivos, esto nos pondrá las carpeta con permisos ``775 drwxrwxr-x.`` y los archivos ``664 -rw-rw-r--.``, si se quiere cambiar, editar el archivo ``./bin/permissions``.
 
-A parte dará permisos de ejecución a algunos archivos, a los archivos ``./bin/*`` y ``./src/manage.py`` entre otros.
+A parte dará permisos de ejecución a algunos archivos, los archivos ``./bin/*`` y ``./src/manage.py`` entre otros.
 
     chmod +x bin/permissions.sh
     ./bin/permissions.sh
 
-### Migracion y super usuario (desarrollo)
+### Migración y super usuario (desarrollo)
 
     ./manage.py migrate
     ./manage.py createsuperuser
