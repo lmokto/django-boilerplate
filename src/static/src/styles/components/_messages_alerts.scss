@@ -1,0 +1,14 @@
+#close {
+  float: right;
+  display: inline-block;
+  font-size: 1.5em;
+  position: relative;
+  top: -8px;
+  color: #fff;
+  padding: 4px;
+  cursor: pointer;
+
+  &:hover {
+    color: grey;
+  }
+}

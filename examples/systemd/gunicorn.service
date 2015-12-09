@@ -5,9 +5,9 @@ After=network.target
 
 [Service]
 PIDFile=/run/gunicorn/pid
-User=snicoper
-Group=snicoper
-WorkingDirectory=/home/snicoper/webapps/snicoper.com/bin/
+User=TU_USER
+Group=TU_GROUP
+WorkingDirectory=/home/TU_USER/webapps/example.com/bin/
 ExecStart=/bin/bash gunicorn_start
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s TERM $MAINPID

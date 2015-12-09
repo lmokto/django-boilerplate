@@ -15,11 +15,12 @@ folders=775
 # -rw-rw-r--
 files=664
 
-# Por defecto excluye directorios libs(bower) y node_modules(node)
+# Por defecto excluye directorios vendor(bower) y node_modules(node)
 echo "Cambiando permisos de directorios $folders"
-find $PROJECT_ROOT -type d ! -path "libs" ! -path "node_modules" -exec chmod $folders {} \;
+find $PROJECT_ROOT -type d ! -path "vendor" ! -path "node_modules" -exec chmod $folders {} \;
+
 echo "Cambiando permisos de archivos $files"
-find $PROJECT_ROOT -type f ! -path "libs" ! -path "node_modules" -exec chmod $files {} \;
+find $PROJECT_ROOT -type f ! -path "vendor" ! -path "node_modules" -exec chmod $files {} \;
 
 ########################
 # Permisos de ejecución.
@@ -32,12 +33,12 @@ echo "Cambiando permisos de ejecución a $BIN_ROOT/gunicorn_start"
 chmod +x "$BIN_ROOT/gunicorn_start"
 
 echo "Cambiando permisos de ejecución a $SRC_ROOT/manage.py"
-chmod +x "$SRC_ROOT/manage.py"
+chmod +x "$PROJECT_ROOT/manage.py"
 
 echo "Cambiando permisos de ejecución a $SRC_ROOT/prod_manage.py"
-chmod +x "$SRC_ROOT/prod_manage.py"
+chmod +x "$PROJECT_ROOT/prod_manage.py"
 
 echo "Cambiando permisos de ejecución a $SRC_ROOT/test_manage.py"
-chmod +x "$SRC_ROOT/test_manage.py"
+chmod +x "$PROJECT_ROOT/test_manage.py"
 
 echo "Terminado el cambio de permisos."

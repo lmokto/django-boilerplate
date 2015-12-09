@@ -12,8 +12,14 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+
+# Add BASE_DIR and BASE_DIR/apps to $PYTHONPATH.
+
+sys.path.append(BASE_DIR)
+sys.path.append(os.path.join(BASE_DIR, 'apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
@@ -34,8 +40,8 @@ INSTALLED_APPS = (
 THIRD_PARTY_APPS = ()
 
 LOCAL_APPS = (
-    'apps.home',
-    'apps.utils',
+    'home',
+    'utils',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
                 'django.contrib.messages.context_processors.messages',
+                'utils.context_processors.site_processor',
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
@@ -116,5 +123,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

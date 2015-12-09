@@ -3,7 +3,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.static import serve
 
-from apps.home.views import IndexView
+from home.views import IndexView
 
 urlpatterns = [
     ##################################################
@@ -12,7 +12,7 @@ urlpatterns = [
     ##################################################
 
     # /home/*
-    url(r'^home/', include('apps.home.urls')),
+    url(r'^home/', include('home.urls')),
 
     # /admin/*
     url(r'^admin/', include(admin.site.urls)),

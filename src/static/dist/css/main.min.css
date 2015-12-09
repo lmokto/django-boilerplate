@@ -1,0 +1,3 @@
+.to-top{background:rgba(0,0,0,0.3);border-radius:30px;bottom:10px;box-shadow:1px 1px 5px rgba(0,0,0,0.5);display:none;height:45px;position:fixed;right:10px;width:45px}.to-top:before{color:#446e9b;content:"\e113";font-family:"Glyphicons Halflings";font-size:20px;left:13px;position:relative;top:9px}.to-top:hover{background:#446e9b;cursor:pointer}.to-top:hover:before{color:#fff}#close{float:right;display:inline-block;font-size:1.5em;position:relative;top:-8px;color:#fff;padding:4px;cursor:pointer}#close:hover{color:grey}
+
+/*# sourceMappingURL=main.min.css.map */

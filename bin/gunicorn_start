@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-NAME="snicoper.com" # Name of the application
-DJANGODIR=/home/snicoper/www/snicoper.com/src/ # Django project directory
-LOGFILE=/home/snicoper/www/snicoper.com/logs/gunicorn.log
+NAME="example.com" # Name of the application
+DJANGODIR=/home/TU_USER/webapps/example.com/src/ # Django project directory
+LOGFILE=/home/TU_USER/webapps/example.com/logs/gunicorn.log
 LOGDIR=$(dirname $LOGFILE)
-USER=snicoper # the user to run as
-GROUP=snicoper # the group to run as
+USER=TU_USER # the user to run as
+GROUP=TU_GROUP # the group to run as
 ADDRESS=127.0.0.1:8001
 NUM_WORKERS=3 # how many worker processes should Gunicorn spawn
 DJANGO_SETTINGS_MODULE=config.settings.prod # which settings file should Django use
@@ -15,7 +15,7 @@ echo "Starting $NAME as `whoami`"
 
 # Activate the virtual environment
 cd $DJANGODIR
-source /home/snicoper/.virtualenvs/snicoper.com/bin/activate
+source /home/TU_USER/.virtualenvs/example.com/bin/activate
 export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 

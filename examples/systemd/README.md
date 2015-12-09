@@ -2,5 +2,3 @@
 
     sudo systemctl start gunicorn.service
     sudo systemctl enable gunicorn.service
-
-Cambiar usuario y grupo
