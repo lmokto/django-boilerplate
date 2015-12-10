@@ -14,6 +14,6 @@
     event.preventDefault();
     jQuery('html, body').animate({scrollTop: 0}, duration);
     return false;
-  })
+  });
 })();
 

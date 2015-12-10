@@ -42,7 +42,7 @@ Editar ``./.package.json`` para los paquetes de **nodejs**
 Para actualizar los paquetes, usar [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 
     sudo npm install -g npm-check-updates
-    
+
     # Mostrar paquetes con actualizaciones.
     ncu
 
@@ -56,11 +56,11 @@ Para actualizar los paquetes, usar [npm-check-updates](https://www.npmjs.com/pac
 
 ### Bower
 
-Actualmente instala 
+Actualmente instala
 
 - [JQuery](https://jquery.com/)
 - [font-awesome](https://fortawesome.github.io/Font-Awesome/)
-- [Materialize](http://materializecss.com)
+- [Bootstrap3](http://getbootstrap.com)
 
 Los paquetes los instala en ``./src/static/vendor/``
 
