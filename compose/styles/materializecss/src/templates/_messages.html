@@ -1,0 +1,20 @@
+{% if messages %}
+  <div class="row">
+    <div class="col s12 m10 push-m1 l6 push-l3">
+      {% for message in messages %}
+        {% if message.tags == 'error' %}
+          <div class="card-panel red">
+        {% elif message.tags == 'info' %}
+          <div class="card-panel blue">
+        {% elif message.tags == 'success' %}
+          <div class="card-panel teal">
+        {% elif message.tags == 'warning' %}
+          <div class="card-panel orange">
+        {% endif %}
+          <span id="close" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;">&times;</span>
+          <span class="white-text">{{ message }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

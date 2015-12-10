@@ -1,0 +1,10 @@
+// Pega el footer en la parte superior del navegador
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+// fin Pega el footer en la parte superior del navegador
