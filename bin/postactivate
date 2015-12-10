@@ -1,0 +1,16 @@
+#!/bin/bash
+# This hook is sourced after this virtualenv is activated.
+
+PROJECT_ROOT=$(dirname $(dirname ${BASH_SOURCE[0]}))
+BIN_ROOT="$PROJECT_ROOT/bin"
+SRC_ROOT="$PROJECT_ROOT/src"
+APPS_ROOT="$SRC_ROOT/apps"
+
+alias cd_project="cd $PROJECT_ROOT"
+alias cd_apps="cd $PROJECT_ROOT/src/apps"
+
+export OLD_PATH=$PATH
+export PATH=$BIN_ROOT:$OLD_PATH
+
+# export OLD_PYTHONPATH=$PYTHONPATH
+# export PYTHONPATH=$SRC_ROOT:$APPS_ROOT:$OLD_PYTHONPATH

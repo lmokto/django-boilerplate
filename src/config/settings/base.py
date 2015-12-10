@@ -18,8 +18,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 # Add BASE_DIR and BASE_DIR/apps to $PYTHONPATH.
 
-sys.path.append(BASE_DIR)
-sys.path.append(os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(0, BASE_DIR)
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
