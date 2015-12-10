@@ -32,6 +32,12 @@ chmod +x "$BIN_ROOT/permissions"
 echo "Cambiando permisos de ejecución a $BIN_ROOT/gunicorn_start"
 chmod +x "$BIN_ROOT/gunicorn_start"
 
+echo "Cambiando permisos de ejecución a $BIN_ROOT/delete_migrations"
+chmod +x "$BIN_ROOT/delete_migrations"
+
+echo "Cambiando permisos de ejecución a $BIN_ROOT/delete_pycache"
+chmod +x "$BIN_ROOT/delete_pycache"
+
 echo "Cambiando permisos de ejecución a $SRC_ROOT/manage.py"
 chmod +x "$PROJECT_ROOT/manage.py"
 
