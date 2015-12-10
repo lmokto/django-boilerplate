@@ -1,28 +1,28 @@
 // Botón subir pagina.
-// Usa Bootstrap para la fuente.
+// Usa FontAwesome para la fuente.
 .to-top {
   background: rgba(0, 0, 0, .3);
   border-radius: 30px;
   bottom: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
   display: none;
-  height: 45px;
+  height: 46px;
   position: fixed;
   right: 10px;
-  width: 45px;
+  width: 46px;
 
   &:before {
     color: rgb(68, 110, 155);
-    content: "\e113";
-    font-family: "Glyphicons Halflings";
-    font-size: 20px;
-    left: 13px;
+    content: "\f106";
+    font-family: "FontAwesome";
+    font-size: 36px;
+    left: 12px;
     position: relative;
-    top: 9px;
+    top: -5px;
   }
 
   &:hover {
-    background: rgb(68, 110, 155);
+    background: #4A148C;
     cursor: pointer;
   }
 
