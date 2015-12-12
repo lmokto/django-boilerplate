@@ -11,7 +11,7 @@
         {% elif message.tags == 'warning' %}
           <div class="card-panel orange">
         {% endif %}
-          <span id="close" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;">&times;</span>
+          <span class="close-alert">&times;</span>
           <span class="white-text">{{ message }}</span>
         </div>
       {% endfor %}
