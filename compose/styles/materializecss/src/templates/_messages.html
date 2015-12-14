@@ -3,18 +3,19 @@
     <div class="col s12 m10 push-m1 l6 push-l3">
       {% for message in messages %}
         {% if message.tags == 'error' %}
-          <div class="card-panel red">
+          <div class="alert alert-error">
         {% elif message.tags == 'info' %}
-          <div class="card-panel blue">
+          <div class="alert alert-info">
         {% elif message.tags == 'success' %}
-          <div class="card-panel teal">
+          <div class="alert alert-success">
         {% elif message.tags == 'warning' %}
-          <div class="card-panel orange">
+          <div class="alert alert-warning">
         {% endif %}
           <span class="close-alert">&times;</span>
-          <span class="white-text">{{ message }}</span>
+          {{ message }}
         </div>
       {% endfor %}
     </div>
   </div>
 {% endif %}
+

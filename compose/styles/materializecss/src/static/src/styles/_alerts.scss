@@ -1,15 +1,68 @@
-// X para cerrar los alerts.
-.close-alert {
-  float: right;
-  display: inline-block;
-  font-size: 1.5em;
+.alert {
+  margin: 10px auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  padding: 10px 10px 10px 55px;
   position: relative;
-  top: -8px;
-  color: #fff;
-  padding: 4px;
-  cursor: pointer;
+  color: rgba(255, 255, 255, .8);
 
-  &:hover {
-    color: grey;
+  &:before {
+    font-family: "Material Icons";
+    font-size: 2.5rem;
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    opacity: .5;
+    color: black;
+  }
+
+  &.alert-error {
+    background-color: $color-error;
+
+    &:before {
+      content: "\e000";
+    }
+  }
+
+  &.alert-info {
+    background-color: $color-info;
+
+    &:before {
+      content: "\E88E";
+    }
+  }
+
+  &.alert-warning {
+    background-color: $color-warning;
+
+    &:before {
+      content: "\E002";
+    }
+  }
+
+  &.alert-success {
+    background-color: $color-success;
+
+    background-color: teal;
+
+    &:before {
+      content: "\E86C";
+    }
+  }
+
+  // X para cerrar los alerts.
+  .close-alert {
+    float: right;
+    display: inline-block;
+    font-size: 1.5em;
+    position: relative;
+    top: -8px;
+    color: #fff;
+    padding: 4px;
+    cursor: pointer;
+
+    &:hover {
+      color: grey;
+    }
   }
 }
+
