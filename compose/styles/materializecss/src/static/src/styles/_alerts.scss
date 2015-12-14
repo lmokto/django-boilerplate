@@ -1,18 +1,22 @@
 .alert {
-  margin: 10px auto;
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-  padding: 10px 10px 10px 55px;
+  color: rgba(255, 255, 255, .7);
+  margin: 10px;
+  padding: 10px 10px 10px 50px;
   position: relative;
-  color: rgba(255, 255, 255, .8);
+
+  strong {
+    font-weight: bold;
+  }
 
   &:before {
+    color: black;
     font-family: "Material Icons";
     font-size: 2.5rem;
+    left: 6px;
+    opacity: .4;
     position: absolute;
     top: -6px;
-    left: 10px;
-    opacity: .5;
-    color: black;
   }
 
   &.alert-error {
@@ -51,14 +55,14 @@
 
   // X para cerrar los alerts.
   .close-alert {
-    float: right;
+    color: #fff;
+    cursor: pointer;
     display: inline-block;
+    float: right;
     font-size: 1.5em;
+    padding: 4px;
     position: relative;
     top: -8px;
-    color: #fff;
-    padding: 4px;
-    cursor: pointer;
 
     &:hover {
       color: grey;
