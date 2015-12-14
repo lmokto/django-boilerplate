@@ -1,3 +1,19 @@
-@import "base";
-@import "totop";
-@import "footer";
+@charset "UTF-8";
+
+/*** Importar Roboto font de Materialize ***/
+$roboto-font-path: '../../vendor/Materialize/font/roboto/' !default;
+
+/** Override Materialize **/
+@import "materializecss/materialize";
+
+/*** Base ***/
+@import "base/module";
+
+/*** Components ***/
+@import "components/module";
+
+/*** Layout ***/
+@import "layout/module";
+
+/*** Pages ***/
+@import "pages/module";
