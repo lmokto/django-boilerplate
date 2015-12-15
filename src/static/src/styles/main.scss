@@ -3,17 +3,25 @@
 /*** Importar Roboto font de Materialize ***/
 $roboto-font-path: '../../vendor/Materialize/font/roboto/' !default;
 
-/** Override Materialize **/
-@import "materializecss/materialize";
+/*** Colors from materialize ***/
+@import "../../vendor/Materialize/sass/components/color";
 
-/*** Base ***/
-@import "base/module";
+/*** variables ***/
+@import "variables";
 
-/*** Components ***/
-@import "components/module";
+/*******************/
+/*** Materialize ***/
+/*******************/
+@import "../../vendor/Materialize/sass/materialize";
 
-/*** Layout ***/
-@import "layout/module";
+/*** variables ***/
+@import "alerts";
 
-/*** Pages ***/
-@import "pages/module";
+/*** variables ***/
+@import "base";
+
+/*** variables ***/
+@import "footer";
+
+/*** variables ***/
+@import "totop";
