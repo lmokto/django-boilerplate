@@ -20,7 +20,7 @@
   }
 
   &.alert-error {
-    background-color: $color-error;
+    background-color: $error-color;
 
     &:before {
       content: "\e000";
@@ -28,7 +28,7 @@
   }
 
   &.alert-info {
-    background-color: $color-info;
+    background-color: $info-color;
 
     &:before {
       content: "\E88E";
@@ -36,7 +36,7 @@
   }
 
   &.alert-warning {
-    background-color: $color-warning;
+    background-color: $warning-color;
 
     &:before {
       content: "\E002";
@@ -44,7 +44,7 @@
   }
 
   &.alert-success {
-    background-color: $color-success;
+    background-color: $success-color;
 
     background-color: teal;
 
