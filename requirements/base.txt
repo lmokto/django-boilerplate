@@ -1,4 +1,5 @@
 # Archivo requeriments base
 
 Django==1.9
+django-allauth==0.24.1
 pytz==2015.7
