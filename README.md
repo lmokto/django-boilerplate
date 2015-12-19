@@ -60,7 +60,7 @@ Actualmente instala
 
 - [JQuery](https://jquery.com/)
 - [font-awesome](https://fortawesome.github.io/Font-Awesome/)
-- [Bootstrap3](http://getbootstrap.com)
+- [Materializecss](http://materializecss.com)
 
 Los paquetes los instala en ``./src/static/vendor/``
 
@@ -74,9 +74,9 @@ Para actualizar los paquetes, usar [npm-check-updates](https://www.npmjs.com/pac
 
 #### gulpfile.js
 
-- ``gulp``: Junta y minifica los archivos ``.js`` y ``.scss``
-- ``gulp style:sass``: Junta y minifica los archivos ``.scss``
-- ``gulp scripts:js``: Junta y minifica los archivos ``.js``
+- ``gulp``: Unifica y minifica los archivos ``.js`` y ``.scss``
+- ``gulp style:sass``: Unifica y minifica los archivos ``.scss``
+- ``gulp scripts:js``: Unifica y minifica los archivos ``.js``
 - ``gulp watch``: Escucha los directorios ``.js`` y ``.scss``.
 - ``gulp build-docs``: Re construye los docs Sphinx (``make html``)
 - ``gulp sphinx``: Escucha si hay un cambio en ``./docs``.
