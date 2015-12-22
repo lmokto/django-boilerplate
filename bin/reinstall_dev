@@ -26,6 +26,10 @@ DATABASE_USER="usuario"
 SITE_DOMAIN="127.0.0.1:8000"
 SITE_NAME="site_name"
 
+# Colores
+GREEN=`tput setaf 2`
+RESET=`tput sgr0`
+
 # Fin variables
 
 cd $PROJECT_ROOT
@@ -45,14 +49,14 @@ then
 fi
 
 # Restaurar permisos de directorios y archivos.
-read -p "¿Restaurar permisos? (y/[N]) " yn
+read -p "¿Restaurar permisos? (y/${GREEN}[N]${RESET}) " yn
 if [ "$yn" == "y" -o "$yn" == "Y" ]
 then
   $BIN_ROOT/permissions
 fi
 
 # Reinstalar node_modules
-read -p "¿Reinstalar Node? (y/[N]) " yn
+read -p "¿Reinstalar Node? (y/${GREEN}[N]${RESET}) " yn
 if [ "$yn" == "y" -o "$yn" == "Y" ]
 then
   rm -rf $PROJECT_ROOT/node_modules
@@ -60,7 +64,7 @@ then
 fi
 
 # Reinstalar bower
-read -p "¿Reinstalar Bower? (y/[N]) " yn
+read -p "¿Reinstalar Bower? (y/${GREEN}[N]${RESET}) " yn
 if [ "$yn" == "y" -o "$yn" == "Y" ]
 then
   rm -rf $SRC_ROOT/static/vendor
@@ -71,11 +75,11 @@ gulp scripts:js
 gulp style:sass
 
 # Reinstalar la base de datos
-read -p "¿Restaurar la base de datos? (y/[N]) " yn
+read -p "¿Restaurar la base de datos? (y/${GREEN}[N]${RESET}) " yn
 if [ "$yn" == "y" -o "$yn" == "Y" ]
 then
   # Eliminar directorios migrations
-  read -p "¿Eliminar directorios migrations? (y/[N]) " yn
+  read -p "¿Eliminar directorios migrations? (y/${GREEN}[N]${RESET}) " yn
   if [ "$yn" == "y" -o "$yn" == "Y" ]
   then
     source $BIN_ROOT/delete_migrations
@@ -143,7 +147,7 @@ then
 fi
 
 # Creacion de coverage
-read -p "¿Ejecutar coverage? (y/[N]) " yn
+read -p "¿Ejecutar coverage? (y/${GREEN}[N]${RESET}) " yn
 if [ "$yn" == "y" -o "$yn" == "Y" ]
 then
   cd $PROJECT_ROOT
@@ -153,7 +157,7 @@ then
 fi
 
 # Iniciar el servidor
-read -p "¿Iniciar el servidor? (y/[N]) " yn
+read -p "¿Iniciar el servidor? (y/${GREEN}[N]${RESET}) " yn
 if [ "$yn" == "y" -o "$yn" == "Y" ]
 then
   $PROJECT_ROOT/manage.py runserver
