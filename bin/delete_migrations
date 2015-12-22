@@ -3,9 +3,23 @@
 PROJECT_ROOT=$(dirname $(dirname $(readlink -f $0)))
 SRC_ROOT="$PROJECT_ROOT/src"
 
+# Añadir las apps que requieren makemigrations.
+APPS=(
+  home
+  users
+)
+
+# Eliminar todos los directorios 'migrations'.
 find $SRC_ROOT -name "migrations" -exec rm -rf {} \;
 
+tput setaf 3;
 echo "Eliminados los directorios migrations"
 
-echo "Usar ./manage.py makemigrations nombre_app"
-echo "y ./manage.py migrate --fake-initial si la base de datos ya estaba creada."
+# Creacion de directorios migrations en las apps.
+tput setaf 2;
+for app in "${APPS[@]}"
+do
+  $PROJECT_ROOT/manage.py makemigrations $app
+done
+
+tput setaf 7;

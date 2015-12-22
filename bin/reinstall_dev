@@ -1,0 +1,150 @@
+#!/usr/bin/env bash
+
+# Elimina una instalacion y la reinstala en un entorno de desarrollo.
+# Elimina la base de datos y la restaura.
+# Para ver colores con 'tput setaf'  http://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+
+# Variables
+# Paths
+PROJECT_ROOT=$(dirname $(dirname $(readlink -f $0)))
+SRC_ROOT="$PROJECT_ROOT/src"
+BIN_ROOT="$PROJECT_ROOT/bin"
+
+# VIRTUAL_ENV (virtualenvwrapper)
+VIRTUAL_ENV_NAME='mi_virtual_env'
+
+# Super Usuario para el desarrollo.
+USER_USERNAME='admin'
+USER_PASSWORD='pass'
+
+# Databases desarrollo.
+DATABASE_NAME="nombre_db"
+DATABASE_USER="usuario"
+
+# Site Framework
+SITE_DOMAIN="127.0.0.1:8000"
+SITE_NAME="site_name"
+
+# Fin variables
+
+cd $PROJECT_ROOT
+
+if [ ! $VIRTUAL_ENV ]
+then
+  source `which virtualenvwrapper.sh`
+  workon $VIRTUAL_ENV_NAME
+
+  if [ ! $VIRTUAL_ENV ]
+  then
+    tput setaf 1;
+    echo "Es necesario tener un entorno virtual"
+    tput setaf 7;
+    exit
+    fi
+fi
+
+# Restaurar permisos de directorios y archivos.
+read -p "¿Restaurar permisos? (y/[N]) " yn
+if [ "$yn" == "y" -o "$yn" == "Y" ]
+then
+  $BIN_ROOT/permissions
+fi
+
+# Reinstalar node_modules
+read -p "¿Reinstalar Node? (y/[N]) " yn
+if [ "$yn" == "y" -o "$yn" == "Y" ]
+then
+  rm -rf $PROJECT_ROOT/node_modules
+  npm install
+fi
+
+# Reinstalar bower
+read -p "¿Reinstalar Bower? (y/[N]) " yn
+if [ "$yn" == "y" -o "$yn" == "Y" ]
+then
+  rm -rf $SRC_ROOT/static/vendor
+  bower install
+fi
+
+gulp scripts:js
+gulp style:sass
+
+# Reinstalar la base de datos
+read -p "¿Restaurar la base de datos? (y/[N]) " yn
+if [ "$yn" == "y" -o "$yn" == "Y" ]
+then
+  # Eliminar directorios migrations
+  read -p "¿Eliminar directorios migrations? (y/[N]) " yn
+  if [ "$yn" == "y" -o "$yn" == "Y" ]
+  then
+    source $BIN_ROOT/delete_migrations
+  fi
+
+  tput setaf 3;
+  psql -U postgres -c "DROP DATABASE IF EXISTS $DATABASE_NAME"
+  tput setaf 2;
+  echo "Eliminada base de datos $DATABASE_NAME"
+  tput setaf 3;
+  psql -U postgres -c "CREATE DATABASE $DATABASE_NAME WITH OWNER $DATABASE_USER"
+  tput setaf 2;
+  echo "Creada base de datos $DATABASE_NAME WITH OWNER $DATABASE_USER"
+  tput setaf 7;
+
+  $PROJECT_ROOT/manage.py makemigrations
+  $PROJECT_ROOT/manage.py migrate
+
+  # Creación del super usuario.
+  echo "from django.contrib.auth import get_user_model; get_user_model().objects.create_superuser(username='admin', email='$USER_USERNAME', password='$USER_PASSWORD')" | python $PROJECT_ROOT/manage.py shell
+
+  tput setaf 2;
+  echo "Creado el super usuario '$USER_USERNAME' password '$USER_PASSWORD'"
+
+  # Añadir los 'social application' de allauth, para el desarrollo.
+  # Cambiar Client_id y Secret_key
+
+  # Facebook
+  # fb="
+  #   INSERT INTO socialaccount_socialapp
+  #     (id, provider, name, client_id, secret, key)
+  #   VALUES
+  #     ( '1', 'facebook', 'Facebook', 'Client_id', 'Secret_key', '' )
+  # "
+  # fb1="
+  #   INSERT INTO socialaccount_socialapp_sites
+  #     (id, socialapp_id, site_id)
+  #   VALUES ( '1', '1', '1' )
+  # "
+  # tput setaf 3;
+  # psql -U $DATABASE_USER $DATABASE_NAME -c "$fb"
+  # psql -U $DATABASE_USER $DATABASE_NAME -c "$fb1"
+  # tput setaf 2;
+  # echo "Añadida cuanta social de Facebook"
+
+  # Modificar Sites
+  sites="
+    UPDATE django_site
+    SET domain='$SITE_DOMAIN',
+        name='$SITE_NAME'
+  "
+  tput setaf 3;
+  psql -U $DATABASE_USER $DATABASE_NAME -c "$sites"
+  tput setaf 2;
+  echo "Cambiado datos de Site domain=$SITE_DOMAIN name=$SITE_NAME"
+  tput setaf 7;
+fi
+
+# Creacion de coverage
+read -p "¿Ejecutar coverage? (y/[N]) " yn
+if [ "$yn" == "y" -o "$yn" == "Y" ]
+then
+  cd $PROJECT_ROOT
+  coverage run test_manage.py test
+  coverage html
+fi
+
+# Iniciar el servidor
+read -p "¿Iniciar el servidor? (y/[N]) " yn
+if [ "$yn" == "y" -o "$yn" == "Y" ]
+then
+  $PROJECT_ROOT/manage.py runserver
+fi

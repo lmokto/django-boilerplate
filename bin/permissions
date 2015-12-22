@@ -38,6 +38,9 @@ chmod +x "$BIN_ROOT/delete_migrations"
 echo "Cambiando permisos de ejecución a $BIN_ROOT/delete_pycache"
 chmod +x "$BIN_ROOT/delete_pycache"
 
+echo "Cambiando permisos de ejecución a $BIN_ROOT/reinstall_dev"
+chmod +x "$BIN_ROOT/reinstall_dev"
+
 echo "Cambiando permisos de ejecución a $SRC_ROOT/manage.py"
 chmod +x "$PROJECT_ROOT/manage.py"
 
