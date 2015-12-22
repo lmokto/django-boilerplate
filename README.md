@@ -94,6 +94,7 @@ Editar las variables del archivo ``bin/reinstall_dev``.
 - ``VIRTUAL_ENV_NAME``: Nombre del virtualenv (virtualenvwrapper)
 - ``USER_USERNAME``: Nombre del super usuario en django
 - ``USER_PASSWORD``: Contraseña del super usuario en django
+- ``USER_EMAIL``: Email del super usuario en django
 - ``DATABASE_NAME``: Nombre de la base de datos
 - ``DATABASE_USER``: Usuario de la base de datos
 - ``SITE_DOMAIN``: ``domain`` del Framework Site

@@ -16,6 +16,7 @@ VIRTUAL_ENV_NAME='mi_virtual_env'
 # Super Usuario para el desarrollo.
 USER_USERNAME='admin'
 USER_PASSWORD='pass'
+USER_EMAIL='admin@example.com'
 
 # Databases desarrollo.
 DATABASE_NAME="nombre_db"
@@ -94,7 +95,7 @@ then
   $PROJECT_ROOT/manage.py migrate
 
   # Creación del super usuario.
-  echo "from django.contrib.auth import get_user_model; get_user_model().objects.create_superuser(username='admin', email='$USER_USERNAME', password='$USER_PASSWORD')" | python $PROJECT_ROOT/manage.py shell
+  echo "from django.contrib.auth import get_user_model; get_user_model().objects.create_superuser(username='$USER_USERNAME', email='$USER_EMAIL', password='$USER_PASSWORD')" | python $PROJECT_ROOT/manage.py shell
 
   tput setaf 2;
   echo "Creado el super usuario '$USER_USERNAME' password '$USER_PASSWORD'"
