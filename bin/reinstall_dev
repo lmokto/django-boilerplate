@@ -101,13 +101,15 @@ then
 
   # Añadir los 'social application' de allauth, para el desarrollo.
   # Cambiar Client_id y Secret_key
+  # Repetir la tarea para cada social account añadida.
+  #
 
   # Facebook
   # tput setaf 3;
   # psql -U $DATABASE_USER -d $DATABASE_NAME -c "
   #   INSERT INTO socialaccount_socialapp
   #   VALUES (
-  #     '1',
+  #     '1', -- Incrementar en 1 cada social account
   #     'facebook',
   #     'Facebook',
   #     'Client_id',
@@ -118,9 +120,9 @@ then
   # psql -U $DATABASE_USER -d $DATABASE_NAME -c "
   #   INSERT INTO socialaccount_socialapp_sites
   #   VALUES (
-  #     '1',
-  #     '1',
-  #     '1'
+  #     '1', -- id (Incrementar en 1 cada una)
+  #     '1', -- id socialaccount_socialapp (Incrementar en 1 cada una)
+  #     '1' -- id sites por defecto siempre 1
   #   );
   # "
   # tput setaf 2;
@@ -146,6 +148,7 @@ then
   cd $PROJECT_ROOT
   coverage run test_manage.py test
   coverage html
+  coverage report
 fi
 
 # Iniciar el servidor
