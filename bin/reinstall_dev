@@ -103,20 +103,26 @@ then
   # Cambiar Client_id y Secret_key
 
   # Facebook
-  # fb="
-  #   INSERT INTO socialaccount_socialapp
-  #     (id, provider, name, client_id, secret, key)
-  #   VALUES
-  #     ( '1', 'facebook', 'Facebook', 'Client_id', 'Secret_key', '' )
-  # "
-  # fb1="
-  #   INSERT INTO socialaccount_socialapp_sites
-  #     (id, socialapp_id, site_id)
-  #   VALUES ( '1', '1', '1' )
-  # "
   # tput setaf 3;
-  # psql -U $DATABASE_USER $DATABASE_NAME -c "$fb"
-  # psql -U $DATABASE_USER $DATABASE_NAME -c "$fb1"
+  # psql -U $DATABASE_USER -d $DATABASE_NAME -c "
+  #   INSERT INTO socialaccount_socialapp
+  #   VALUES (
+  #     '1',
+  #     'facebook',
+  #     'Facebook',
+  #     'Client_id',
+  #     'Secret_key',
+  #     ''
+  #   );
+  # "
+  # psql -U $DATABASE_USER -d $DATABASE_NAME -c "
+  #   INSERT INTO socialaccount_socialapp_sites
+  #   VALUES (
+  #     '1',
+  #     '1',
+  #     '1'
+  #   );
+  # "
   # tput setaf 2;
   # echo "Añadida cuanta social de Facebook"
 
