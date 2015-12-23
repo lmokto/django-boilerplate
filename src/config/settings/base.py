@@ -45,9 +45,9 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
+    'accounts',
     'home',
     'utils',
-    'users',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -137,7 +137,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'accounts.User'
 
 # allauth
 # http://django-allauth.readthedocs.org/en/latest/configuration.html
