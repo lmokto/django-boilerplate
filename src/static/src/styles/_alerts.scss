@@ -1,8 +1,9 @@
+// Mensajes de alertas (messages.info|warning|etc)
 .alert {
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, .8);
   margin: 10px;
-  padding: 10px 10px 10px 50px;
+  padding: 15px 15px 15px 50px;
   position: relative;
 
   strong {
@@ -16,7 +17,7 @@
     left: 6px;
     opacity: .4;
     position: absolute;
-    top: -6px;
+    top: -2px;
   }
 
   &.alert-error {
@@ -44,9 +45,7 @@
   }
 
   &.alert-success {
-    background-color: $success-color;
-
-    background-color: teal;
+    background-color: color("teal", "lighten-1");
 
     &:before {
       content: "\E86C";
