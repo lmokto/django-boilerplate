@@ -1,20 +1,6 @@
 [run]
+include = src/*
 branch = True
 omit =
-    *__pycache__*
     *migrations*
-    *settings*
-    *test*
-    *virtualenvs*
 
-[paths]
-source = src/
-
-[report]
-# Regexes for lines to exclude from consideration
-exclude_lines =
-
-    if 0:
-    if __name__ == .__main__.:
-
-ignore_errors = True
