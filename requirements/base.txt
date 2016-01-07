@@ -1,6 +1,6 @@
 # Archivo requeriments base
 
-Django==1.9
+Django==1.9.1
 django-allauth==0.24.1
 pytz==2015.7
 django-gravatar2==1.4.0
