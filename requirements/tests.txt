@@ -1,4 +1,4 @@
-# Archivo requeriments tests
+# Archivo requirements tests
 
 ## includes the base.txt requirements file
 -r base.txt

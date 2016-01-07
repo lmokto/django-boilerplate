@@ -1,4 +1,4 @@
-# Archivo requeriments base
+# Archivo requirements base
 
 Django==1.9.1
 django-allauth==0.24.1
